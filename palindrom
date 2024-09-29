@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+bool palli(string str){
+	int word1=0;
+	int  word2 =str.length() - 1;
+	
+	while(word1<word2){
+		if(str[word1] !=str[word2]){
+			return false;
+		}
+		word1++;
+		word2--;
+	}
+	return true;
+}
+int main(){
+	string input;
+	cout<<"Enter the word you wish to test"<<endl;
+	cin>>input;
+	if(palli(input)){
+		cout<<"The word is a palindrom"<<endl;
+		
+	}
+	else{cout<<"The word is not a palindrom"<<endl;
+		
+	}
+	return 0;
+}
